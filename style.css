@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #640f12;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: sticky; /* For modern browsers */
+    top: 0; /* Stick at the top */
+    z-index: 999; /* Stay above other content */
+}
+.mebox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo {
+    width: 100px;
+    margin-left: 40px;
+    border-radius: 70px;
+    margin-right: 10px;
+}
+
+nav {
+    background-color: #02263c;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    padding: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin: 20px 0;
+   
+
+}
+#director{
+    display: flex;
+}
+#director1{
+    height: 700px;
+    position: relative;
+    top:50px;
+   right: 100px;
+}
+#dm{
+    position: relative;
+   left:  220px;
+}
+/* Slider Container */
+.image-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.6s ease;
+    width: calc(100% * 6); /* Adjust based on the number of images */
+}
+
+.slider-track img {
+    width: 100vw; /* Full viewport width */
+    flex-shrink: 0;
+}
+
+/* Optional: Navigation buttons for manual control */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: auto;
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: #0067a3;
+    color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.grid-item h2 {
+    font-size: 1.5em;
+    margin: 10px;
+}
+
+.grid-item p {
+    font-size: 1em;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-content {
+    background-color: #341a26;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap; /* Ensure boxes wrap on smaller screens */
+    justify-content: center; /* Center items horizontally */
+    gap: 10px; /* Add space between boxes */
+}
+
+.box1, .box2, .box3 {
+    background-color: #341a26;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Box Sizing */
+.box1, .box2, .box3 {
+    min-width: 200px; /* Minimum width for each box */
+}
+
+.box1 {
+    width: 30vw;
+}
+
+.box2 {
+    width: 30vw;
+}
+
+.box3 {
+    width: 30vw;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .box1, .box2, .box3 {
+        width: 100%; /* Make boxes full-width on smaller screens */
+    }
+}
+
+/* Bottom Footer */
+.bottom_fotter {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    background-color: #02263c;
+    color: white;
+}
+.social-media a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
+#unique{
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mebox {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mebox h1 {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .nav ul li {
+        padding: 15px;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 80px;
+    }
+
+    .grid-item h2 {
+        font-size: 1.2em;
+    }
+
+    .grid-item p {
+        font-size: 0.9em;
+    }
+}
